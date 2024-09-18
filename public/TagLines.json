@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "page": "about",
+        "title": "Turning Trends into Triumphs:Where Ambition Meets Achievement!",
+        "description": "Our cutting-edge digital marketing agency is dedicated to applying creative, helpful strategies to improve your online exposure and promote growth."
+    },
+    {
+        "id": 2,
+        "page": "services",
+        "title": "Where Excellence Shapes Your Future... We Deliver What You Desire.",
+        "description": "Ignite your brand's growth with our expert digital marketing services, blending creativity and strategy for unmatched online impact."
+    },
+    {
+        "id": 3,
+        "page": "blog",
+        "title": "Unlock Ideas: Dive Deep into Marketing Trends and Tactics!",
+        "description": "Unlock the secrets of digital success with our blog. Where cutting-edge strategies meet creative insights, empowering businesses to stand out in a crowded marketplace and thrive in the online world."
+    },
+    {
+        "id": 4,
+        "page": "contact",
+        "title": "Need Assistance? One Click and We’re On It!",
+        "description": "We evolve when we grow, and so does your business.Assist our digital specialists in participating."
+    }
+]

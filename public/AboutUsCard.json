@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "image": "https://img.freepik.com/free-vector/hand-drawn-business-communication-concept_52683-76159.jpg",
+        "title": "Transparent Communication",
+        "description": "ur pillar is open communication. We keep you posted, from our initial meeting to the final campaign reports. There will be no technicalities or hidden plans—just open, honest interaction that keeps you updated.",
+        "category": "highlighted"
+    },
+    {
+        "id": 2,
+        "image": "https://media.licdn.com/dms/image/D5612AQHRRNtVbcXGXw/article-cover_image-shrink_720_1280/0/1694602687168?e=2147483647&v=beta&t=Q4KTfJyL8OkgF5OuJxY319Rw3GTsCbhK3m1XCDO5w8k",
+        "title": "Client Centric Approach",
+        "description": "Our primary goal is to help you succeed. We focus on your requirements, understand your needs, and build our services to match your vision. Our client-centered strategy guarantees that we continuously act in your best interest.",
+        "category": "highlighted"
+    },
+    {
+        "id": 3,
+        "image": "https://static.vecteezy.com/system/resources/previews/031/757/335/non_2x/marketing-team-working-on-a-marketing-idea-vector.jpg",
+        "title": "Personalised Solutions",
+        "description": "As every business is different, similarly are our approaches. We oppose the idea of universally suitable solutions. Our team of experts designs customized marketing plans that fulfill your specific needs while offering the most effective outcomes.",
+        "category": "highlighted"
+    },
+    {
+        "id": 4,
+        "image": "https://img.freepik.com/free-vector/experts-concept-illustration_114360-4248.jpg",
+        "title": "Unmatched Expertise",
+        "description": "Packed with the latest methods and tools to grow your company, our group of professional digital marketing experts is a formidable force. We stay on top of trends and implement creative techniques to make sure your company gets recognized.",
+        "category": "nonhighlighted"
+    },
+
+    {
+        "id": 5,
+        "image": "https://img.freepik.com/free-vector/politician-sitting-round-table-boardroom-board-directors-with-ceo-holding-formal-talk-office-room-flat-vector-illustration-business-authority-corporate-leader-planning-strategy-concept_74855-22013.jpg?semt=ais_hybrid",
+        "title": "All-inclusive Facilities",
+        "description": "We offer a wide variety of digital marketing services, from PPC and social media management to SEO and content marketing. We tackle each aspect of your online presence with our holistic approach.",
+        "category": "nonhighlighted"
+    },
+    {
+        "id": 6,
+        "image": "https://img.freepik.com/free-vector/tiny-man-analyzing-mind-behaviour-customer_778687-1371.jpg",
+        "title": "A Results-driven Mindset",
+        "description": "Our commitment is to provide measurable results. Our performance indicators and complete documentation reflect the actual outcomes of our efforts, giving clear evidence of your return on investment.",
+        "category": "nonhighlighted"
+    },
+    {
+        "id": 7,
+        "image": "https://img.freepik.com/free-vector/hand-drawn-illustrated-gathering-data-concept_23-2149139706.jpg",
+        "title": "Data-Informed Choices",
+        "description": "We let the numbers do the talking. We adjust campaigns in actual time to make sure they are all designed for maximum impact with our data-driven strategy.",
+        "category": "nonhighlighted"
+    },
+    {
+        "id": 8,
+        "image": "https://img.freepik.com/free-vector/organic-flat-customer-support-illustration_23-2148899174.jpg",
+        "title": "Superior Assistance",
+        "description": "Our support doesn't stop when your campaign launches. We provide continuous assistance with regular updates to make sure your advertising efforts are succeeding. Our team is willing to help you every time you need it.",
+        "category": "nonhighlighted"
+    }
+]

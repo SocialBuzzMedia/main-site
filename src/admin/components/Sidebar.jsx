@@ -1,12 +1,30 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../assets/socialBuzzMedia.png";
 import smallLogo from "../assets/socialBuzzMedia-small.png";
 import { ImBlog } from "react-icons/im";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { TbDeviceVisionPro, TbListDetails } from "react-icons/tb";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
+import { IoLogOut } from "react-icons/io5";
+import axios from "axios";
 
 const Sidebar = () => {
+    const navigate = useNavigate();
+
+    // Handle Logout
+    const handleLogout = async () => {
+        try {
+            await axios.post(
+                `${import.meta.env.VITE_LOCAL_URL}/api/auth/logout`,
+                {},
+                { withCredentials: true }
+            );
+
+            navigate("/admin/login");
+        } catch (error) {
+            console.log("Logout Failed", error);
+        }
+    };
     return (
         <div>
             <div className="lg:w-52 w-20 fixed top-0 bottom-0 left-0 bg-white">
@@ -24,6 +42,16 @@ const Sidebar = () => {
                             className="lg:hidden block"
                         />
                     </NavLink>
+                </div>
+                <div className=" mb-4">
+                    <button
+                        className="flex items-center gap-2 mx-auto text-red-500 rounded-full border border-red-500 px-3 py-2 shadow-md"
+                        onClick={handleLogout}
+                    >
+                        {" "}
+                        <IoLogOut size={40} />
+                        <span>Logout</span>
+                    </button>
                 </div>
                 <hr className="mb-10 shadow-md" />
                 <ul className="flex flex-col gap-5 mx-4">

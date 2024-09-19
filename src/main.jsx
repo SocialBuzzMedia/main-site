@@ -16,7 +16,6 @@ import Contact from "./pages/ContactPage/Contact.jsx";
 import ServicesDescription from "./pages/ServicesDescriptionPage/ServicesDescription.jsx";
 import BlogDescriptions from "./pages/BlogDescriptionPage/BlogDescriptions.jsx";
 
-// import Dashboard from "../../admin/src/pages/Dashboard.jsx";
 import Dashboard from "./admin/pages/Dashboard.jsx";
 import AdminApp from "./admin/App.jsx";
 import BlogEdit from "./admin/pages/BlogEdit.jsx";
@@ -24,10 +23,16 @@ import AboutEdit from "./admin/pages/AboutEdit.jsx";
 import EditVisionMission from "./admin/pages/EditVisionMission.jsx";
 import ServicesEdit from "./admin/pages/ServicesEdit.jsx";
 import EditEmployee from "./admin/pages/EditEmployee.jsx";
+import Login from "./admin/pages/Login.jsx";
+import Register from "./admin/pages/Register.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 const routers = createBrowserRouter(
     createRoutesFromElements(
         <>
+            {/* 404 Error Page */}
+            <Route path="*" element={<NotFound />} />
+
             {/* Frontend Routes */}
             <Route path="/" element={<App />}>
                 <Route index element={<Home />} />
@@ -43,8 +48,10 @@ const routers = createBrowserRouter(
             </Route>
 
             {/* Admin Routes */}
+            <Route path="/admin/login" element={<Login />} />
+            <Route path="/admin/register" element={<Register />} />
             <Route path="/admin" element={<AdminApp />}>
-                <Route index element={<Dashboard />} />
+                <Route path="dashboard" element={<Dashboard />} />
                 <Route path="edit-blog" element={<BlogEdit />} />
                 <Route path="edit-about" element={<AboutEdit />} />
                 <Route

@@ -73,7 +73,11 @@ const Services = () => {
                     />
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 m-8 py-6">
                         {serviceSection.map((data) => (
-                            <ServiceCard key={data._id} services={data} />
+                            <ServiceCard
+                                key={data._id}
+                                services={data}
+                                slugText={"Read More"}
+                            />
                         ))}
                     </div>
                 </div>

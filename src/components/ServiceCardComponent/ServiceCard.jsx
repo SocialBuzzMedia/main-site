@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 import { Link, NavLink } from "react-router-dom";
 
-const ServiceCard = ({ services }) => {
+const ServiceCard = ({ services, slugText, normalLink }) => {
     return (
         <div>
             <div className="container border shadow-lg bg-white rounded-lg p-4">
@@ -27,16 +27,24 @@ const ServiceCard = ({ services }) => {
                         ))}
                     </ul>
                 </div>
-                <div className="w-full ">
-                    {services.slug ? (
+                <div className="w-full text-center ">
+                    {slugText && (
                         <Link
                             to={`/services/${services.slug}`}
                             className="text-white bg-red-500 mx-auto px-10 py-1 rounded-full text-center"
                         >
-                            Read More
+                            {slugText}
                         </Link>
-                    ) : (
-                        <NavLink to={"/services"}>Learn More</NavLink>
+                    )}
+                    {normalLink && (
+                        <NavLink
+                            to={"/services"}
+                            className={
+                                "text-white bg-red-500 mx-auto px-10 py-1 rounded-full text-center"
+                            }
+                        >
+                            {normalLink}
+                        </NavLink>
                     )}
                 </div>
             </div>
@@ -47,6 +55,8 @@ const ServiceCard = ({ services }) => {
 ServiceCard.propTypes = {
     // services: PropTypes.string,
     services: PropTypes.string,
+    slugText: PropTypes.string,
+    normalLink: PropTypes.string,
 };
 
 export default ServiceCard;

@@ -24,7 +24,7 @@ import EditVisionMission from "./admin/pages/EditVisionMission.jsx";
 import ServicesEdit from "./admin/pages/ServicesEdit.jsx";
 import EditEmployee from "./admin/pages/EditEmployee.jsx";
 import Login from "./admin/pages/Login.jsx";
-import Register from "./admin/pages/Register.jsx";
+// import Register from "./admin/pages/Register.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
 const routers = createBrowserRouter(
@@ -49,7 +49,7 @@ const routers = createBrowserRouter(
 
             {/* Admin Routes */}
             <Route path="/admin/login" element={<Login />} />
-            <Route path="/admin/register" element={<Register />} />
+            {/* <Route path="/admin/register" element={<Register />} /> */}
             <Route path="/admin" element={<AdminApp />}>
                 <Route path="dashboard" element={<Dashboard />} />
                 <Route path="edit-blog" element={<BlogEdit />} />

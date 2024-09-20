@@ -1,6 +1,5 @@
 import bgVideo from "/videos/bg-hero-video-a.mp4";
 import HeroSection from "../../components/HeroSection/HeroSection";
-import Card from "../../components/CardComponent/Card";
 import { useEffect, useState } from "react";
 import Headings from "../../components/HeadingComponent/Headings";
 import ContactCTA from "../../components/ContactCTAButton/ContactCTA";
@@ -8,6 +7,7 @@ import Carousel from "../../components/CarouselComponent/Carousel";
 import HelmetWrapper from "../../components/HelmetProviderComponent/HelmetWrapper";
 import ServiceCard from "../../components/ServiceCardComponent/ServiceCard";
 import axios from "axios";
+import AboutCard from "../../components/AboutCardComponent/AboutCard";
 
 const Home = () => {
     const [serviceSection, setServiceSection] = useState([]);
@@ -31,31 +31,31 @@ const Home = () => {
         fetchVisibleServices();
     }, []);
 
-    // useEffect(() => {
-    //     const fetchVisibleAbouts = async () => {
-    //         try {
-    //             const response = await axios.get(
-    //                 `${import.meta.env.VITE_LOCAL_URL}/api/about/visible`
-    //             );
-    //             setAboutSection(response.data);
-    //         } catch (error) {
-    //             console.log("Error Fetching Visible Services", error);
-    //         }
-    //     };
-    //     fetchVisibleAbouts();
-    // }, []);
-
     useEffect(() => {
-        fetch("/AboutUsCard.json")
-            .then((response) => response.json())
-            .then((data) => {
-                const filterAbout = data.filter(
-                    (about) => about.category === "highlighted"
+        const fetchVisibleAbouts = async () => {
+            try {
+                const response = await axios.get(
+                    `${import.meta.env.VITE_LOCAL_URL}/api/about/visible`
                 );
-                setAboutSection(filterAbout);
-                // console.log(filterAbout);
-            });
+                setAboutSection(response.data);
+            } catch (error) {
+                console.log("Error Fetching Visible Services", error);
+            }
+        };
+        fetchVisibleAbouts();
     }, []);
+
+    // useEffect(() => {
+    //     fetch("/AboutUsCard.json")
+    //         .then((response) => response.json())
+    //         .then((data) => {
+    //             const filterAbout = data.filter(
+    //                 (about) => about.category === "highlighted"
+    //             );
+    //             setAboutSection(filterAbout);
+    //             // console.log(filterAbout);
+    //         });
+    // }, []);
 
     return (
         <>
@@ -90,6 +90,7 @@ const Home = () => {
                                     <ServiceCard
                                         key={data._id}
                                         services={data}
+                                        normalLink={"Learn More"}
                                     />
                                 );
                             })}
@@ -114,13 +115,10 @@ const Home = () => {
                                 aboutSection.length > 0 &&
                                 aboutSection.map((data) => {
                                     return (
-                                        <Card
-                                            key={data.id}
-                                            icon={data.image}
-                                            title={data.title}
-                                            description={data.description}
-                                            cardLink={`/about-us`}
-                                            linkText={`Learn More`}
+                                        <AboutCard
+                                            key={data._id}
+                                            about={data}
+                                            linkText={"Read More"}
                                         />
                                     );
                                 })}

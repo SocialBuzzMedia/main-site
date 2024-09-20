@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-const AboutCard = ({ about }) => {
+const AboutCard = ({ about, linkText }) => {
     return (
         <div>
             <img
@@ -13,6 +14,7 @@ const AboutCard = ({ about }) => {
                     {about.title}
                 </h2>
                 <p className="mb-4 px-2">{about.description}</p>
+                {linkText && <Link to={`/about`}>{linkText}</Link>}
             </div>
         </div>
     );
@@ -20,6 +22,7 @@ const AboutCard = ({ about }) => {
 
 AboutCard.propTypes = {
     about: PropTypes.string,
+    linkText: PropTypes.string,
 };
 
 export default AboutCard;

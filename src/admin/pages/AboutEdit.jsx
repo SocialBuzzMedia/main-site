@@ -9,6 +9,7 @@ const AboutEdit = () => {
     const [aboutData, setAboutData] = useState({
         title: "",
         description: "",
+        category: "",
         image: null,
     });
     const [editMode, setEditMode] = useState(false);
@@ -44,6 +45,7 @@ const AboutEdit = () => {
         const formData = new FormData();
         formData.append("title", aboutData.title);
         formData.append("description", aboutData.description);
+        formData.append("category", aboutData.category);
         if (aboutData.image) {
             formData.append("image", aboutData.image);
         }
@@ -81,6 +83,7 @@ const AboutEdit = () => {
         setAboutData({
             title: about.title,
             description: about.description,
+            category: about.category,
             image: null,
         });
         setCurrentAboutId(about._id);
@@ -99,7 +102,12 @@ const AboutEdit = () => {
 
     // Reset the form
     const resetForm = () => {
-        setAboutData({ title: "", description: "", image: null });
+        setAboutData({
+            title: "",
+            description: "",
+            category: " ",
+            image: null,
+        });
         setEditMode(false);
         setCurrentAboutId(null);
     };
@@ -196,6 +204,18 @@ const AboutEdit = () => {
                             placeholder="Add description"
                             className="rounded w-full p-2 border border-gray-200"
                         />
+                        <select
+                            name="category"
+                            value={aboutData.category}
+                            onChange={handleInputChange}
+                            className="border p-2 w-full mb-4"
+                            required
+                        >
+                            <option>Select</option>
+                            <option value="Show">Show</option>
+                            <option value="Hide">Hide</option>
+                        </select>
+
                         <button
                             type="submit"
                             className="bg-blue-500 text-white p-2 rounded-full"

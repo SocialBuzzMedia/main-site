@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -56,21 +56,11 @@ const Login = () => {
                     />
                 </div>
                 <button
-                    className="bg-green-500 text-white py-2 px-4 rounded-full w-full"
+                    className="bg-red-500 text-white py-2 px-4 rounded-full w-full"
                     type="submit"
                 >
                     Login
                 </button>
-                <div className="my-3 text-center">
-                    Not registered{" "}
-                    <NavLink
-                        to={`/admin/register`}
-                        className="text-red-500 underline"
-                    >
-                        {" "}
-                        Register Here{" "}
-                    </NavLink>
-                </div>
             </form>
         </div>
     );

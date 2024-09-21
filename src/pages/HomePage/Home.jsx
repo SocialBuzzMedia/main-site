@@ -1,13 +1,15 @@
-import bgVideo from "/videos/bg-hero-video-a.mp4";
-import HeroSection from "../../components/HeroSection/HeroSection";
 import { useEffect, useState } from "react";
+import axios from "axios";
+
+// Components Import
 import Headings from "../../components/HeadingComponent/Headings";
 import ContactCTA from "../../components/ContactCTAButton/ContactCTA";
 import Carousel from "../../components/CarouselComponent/Carousel";
-import HelmetWrapper from "../../components/HelmetProviderComponent/HelmetWrapper";
 import ServiceCard from "../../components/ServiceCardComponent/ServiceCard";
-import axios from "axios";
 import AboutCard from "../../components/AboutCardComponent/AboutCard";
+import HeroSection from "../../components/HeroSection/HeroSection";
+import bgVideo from "/videos/bg-hero-video-a.mp4";
+import HelmetWrapper from "../../components/HelmetProviderComponent/HelmetWrapper";
 
 const Home = () => {
     const [serviceSection, setServiceSection] = useState([]);
@@ -17,6 +19,7 @@ const Home = () => {
         window.scrollTo(0, 0);
     }, []);
 
+    // Fetch Visible Services Card
     useEffect(() => {
         const fetchVisibleServices = async () => {
             try {
@@ -31,6 +34,7 @@ const Home = () => {
         fetchVisibleServices();
     }, []);
 
+    // Fetch Visible About Card
     useEffect(() => {
         const fetchVisibleAbouts = async () => {
             try {
@@ -44,18 +48,6 @@ const Home = () => {
         };
         fetchVisibleAbouts();
     }, []);
-
-    // useEffect(() => {
-    //     fetch("/AboutUsCard.json")
-    //         .then((response) => response.json())
-    //         .then((data) => {
-    //             const filterAbout = data.filter(
-    //                 (about) => about.category === "highlighted"
-    //             );
-    //             setAboutSection(filterAbout);
-    //             // console.log(filterAbout);
-    //         });
-    // }, []);
 
     return (
         <>
@@ -100,7 +92,7 @@ const Home = () => {
 
             {/* Why Choose Us Section */}
             <div>
-                <div className="py-10 bg-red-500">
+                <div className="py-10 bg-red-500 ">
                     <Headings
                         title={`Why Choose Us`}
                         description={

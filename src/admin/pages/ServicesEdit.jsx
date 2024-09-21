@@ -93,8 +93,8 @@ const ServicesEdit = () => {
             title: service.title,
             description: service.description,
             category: service.category,
-            whyChooseUs: JSON.parse(service.whyChooseUs),
-            whyEssential: JSON.parse(service.whyEssential),
+            whyChooseUs: service.whyChooseUs,
+            whyEssential: service.whyEssential,
             image: null,
         });
 

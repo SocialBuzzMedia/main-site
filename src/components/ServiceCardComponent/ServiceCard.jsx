@@ -9,9 +9,9 @@ const ServiceCard = ({ services, slugText, normalLink }) => {
                 <img
                     src={`${import.meta.env.VITE_LOCAL_URL}${services.image}`}
                     alt={services.title}
-                    className="rounded-t-lg shadow-md object-cover h-56"
+                    className="rounded-t-lg shadow-md object-cover"
                 />
-                <h2 className="text-2xl font-semibold my-4 text-center text-red-500  ">
+                <h2 className="text-2xl font-semibold my-4 text-center text-red-500">
                     {services.title}
                 </h2>
 

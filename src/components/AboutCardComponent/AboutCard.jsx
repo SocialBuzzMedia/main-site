@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const AboutCard = ({ about, linkText }) => {
     return (
-        <div className="container border shadow-lg rounded-lg p-4 bg-white">
+        <div className="container border shadow-lg rounded-lg p-4 bg-white w-11/12 sm:mx-3 mx-5">
             <img
                 src={`${import.meta.env.VITE_LOCAL_URL}${about.image}`}
                 alt={about.title}
-                className="rounded-t-lg shadow-md object-cover "
+                className="rounded-t-lg shadow-md mx-auto"
             />
 
             <h2 className="my-3 text-2xl font-semibold text-red-500 text-center">

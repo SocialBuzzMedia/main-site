@@ -10,7 +10,7 @@ const AboutUsSections = ({
 }) => {
     return (
         <>
-            <div className="md:w-3/4 mx-auto">
+            <div className="md:w-11/12 mx-auto">
                 <div
                     className={`flex justify-center items-center gap-11 py-10 ${aboutDirection}`}
                 >

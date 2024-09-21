@@ -13,10 +13,10 @@ const BlogCard = ({ blog }) => {
                 />
 
                 <div className="flex flex-col justify-center items-center p-2">
-                    <h2 className="my-3 text-2xl font-semibold text-red-500 text-center">
-                        {blog.title.substring(0, 35)}
+                    <h2 className="my-3 text-2xl font-semibold text-red-500 text-center whitespace-pre-line">
+                        {blog.title.substring(0, 35) + " " + "..."}
                     </h2>
-                    <p className="mb-4 px-2">
+                    <p className="mb-4 px-2 whitespace-pre-line">
                         {blog.description.substring(0, 200) + " " + "..."}
                     </p>
                     <p className="text-gray-600 my-7 flex justify-between">

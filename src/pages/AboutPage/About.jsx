@@ -88,7 +88,7 @@ Let's team up to build your place as an expert in this digital age, where succes
             </div>
 
             {/* Our Mission */}
-            <div className="bg-red-500">
+            <div className="bg-red-400">
                 <AboutUsSections
                     image={image}
                     heading={`Our Mission`}
@@ -115,8 +115,8 @@ We will work together to revamp your online presence and promote your message so
                     // className={`text-white`}
                     // classNameDesc={`text-white`}
                 />
-                <div className="md:w-3/4 mx-auto">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 m-8 ">
+                <div className="md:w-11/12 mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-5 mx-auto md:mx-2 ">
                         {aboutSection.map((about) => (
                             <AboutCard key={about._id} about={about} />
                         ))}
@@ -142,42 +142,6 @@ We will work together to revamp your online presence and promote your message so
                             {employeeSection.map((emp) => (
                                 <Teams key={emp._id} teamDetails={emp} />
                             ))}
-
-                            {/* <Teams
-                                image={gourab}
-                                memberName={`Gourab Mahanto`}
-                                memberDesignation={`Digital Marketing Executive`}
-                            />
-                            <Teams
-                                image={anamika}
-                                memberName={`Anamika Mukherjee`}
-                                memberDesignation={`Digital Marketing Executive`}
-                            />
-                            <Teams
-                                image={sritirekha}
-                                memberName={`Sritirekha Biswas`}
-                                memberDesignation={`Graphics Designer`}
-                            />
-                            <Teams
-                                image={alfaj}
-                                memberName={`Alfaj Mamur`}
-                                memberDesignation={`Graphics Designer`}
-                            />
-                            <Teams
-                                image={arkaprava}
-                                memberName={`Arkaprava Chakrabarty`}
-                                memberDesignation={`Web developer`}
-                            />
-                            <Teams
-                                image={debasish}
-                                memberName={`Debasish Roy`}
-                                memberDesignation={`Web developer`}
-                            />
-                            <Teams
-                                image={dibyaprabha}
-                                memberName={`Dibyaprabha Das`}
-                                memberDesignation={`Content Writer`}
-                            /> */}
                         </div>
                     </div>
                 </div>

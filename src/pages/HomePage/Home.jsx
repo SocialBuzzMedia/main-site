@@ -73,8 +73,8 @@ const Home = () => {
                         "We provide personalized digital marketing plans that boost brand recognition and interaction on various online channels."
                     }
                 />
-                <div className="md:w-3/4 mx-auto">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 m-8 ">
+                <div className="md:w-11/12 mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-5 mx-auto md:mx-2 ">
                         {serviceSection &&
                             serviceSection.length > 0 &&
                             serviceSection.map((data) => {
@@ -92,7 +92,7 @@ const Home = () => {
 
             {/* Why Choose Us Section */}
             <div>
-                <div className="py-10 bg-red-500 ">
+                <div className="py-10 bg-red-400 ">
                     <Headings
                         title={`Why Choose Us`}
                         description={
@@ -101,8 +101,8 @@ const Home = () => {
                         className={`text-white`}
                         classNameDesc={`text-white`}
                     />
-                    <div className="md:w-3/4 mx-auto">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 m-8 ">
+                    <div className="md:w-11/12 mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-5 mx-auto md:mx-2  ">
                             {aboutSection &&
                                 aboutSection.length > 0 &&
                                 aboutSection.map((data) => {
@@ -123,7 +123,7 @@ const Home = () => {
                     <div className="mb-6">
                         <Headings title={`Our Clients`} />
                     </div>
-                    <div className="md:w-3/4 mx-auto ">
+                    <div className="md:w-11/12 mx-auto ">
                         <Carousel />
                     </div>
                 </div>

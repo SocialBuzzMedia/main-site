@@ -34,13 +34,15 @@ const BlogDescriptions = () => {
     return (
         <div className=" mt-14">
             {/* Horizontal Ad */}
-            <div className="w-[728px] h-[90px] bg-red-500 mx-auto"></div>
+            <div className="w-[728px] h-[90px] bg-red-500 mx-auto hidden md:block"></div>
+            {/* Horizontal Ad Mobile */}
+            <div className="w-[300px] h-[50px] bg-red-500 mx-auto md:hidden block"></div>
             {/* Vertical Left */}
-            <div className="w-[160px] h-[600px] bg-red-500 float-start inline-block"></div>
+            <div className="w-[160px] h-[600px] bg-red-500 float-start lg:inline-block hidden ml-10 mt-20"></div>
             {/* Vertical Right */}
-            <div className="w-[160px] h-[600px] bg-red-500 float-end inline-block"></div>
+            <div className="w-[160px] h-[600px] bg-red-500 float-end lg:inline-block hidden mr-10 mt-20"></div>
             {/* Blog Content */}
-            <div className="w-7/12 mx-auto mt-10">
+            <div className="md:w-7/12 sm:w-9/12 mx-auto mt-10">
                 {/* Meta Title And Description */}
                 <HelmetWrapper
                     title={blog.metaTitle}
@@ -49,17 +51,19 @@ const BlogDescriptions = () => {
                 <img
                     src={`${import.meta.env.VITE_LOCAL_URL}${blog.bannerImage}`}
                     alt={blog.title}
-                    className="w-full  object-cover mb-10 rounded shadow-md "
+                    className="w-full mx-1 object-cover mb-10 rounded shadow-md "
                 />
-                <h1 className="text-5xl font-semibold text-red-500 mb-5 text-center">
-                    {blog.title}
-                </h1>
-                {/* <p className="text-gray-600 mb-4 text-lg">{blog.description}</p> */}
+                <div className="p-4">
+                    <h1 className="md:text-4xl text-lg font-semibold text-red-500 mb-5 whitespace-pre-line ">
+                        {blog.title}
+                    </h1>
+                    {/* <p className="text-gray-600 mb-4 text-lg">{blog.description}</p> */}
 
-                <div
-                    dangerouslySetInnerHTML={{ __html: blog.content }}
-                    className="prose text-lg"
-                ></div>
+                    <div
+                        dangerouslySetInnerHTML={{ __html: blog.content }}
+                        className="prose text-lg"
+                    ></div>
+                </div>
                 <p className="text-gray-600 my-7 text-right text-md">
                     <div>
                         By{" "}

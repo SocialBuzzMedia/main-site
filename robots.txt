@@ -1,0 +1,11 @@
+# Allow all crawlers to access entire site
+User-agent: *
+Disallow:
+
+
+# Disallow crawler of the admin panel
+User-agent: *
+DisallowL /admin
+
+
+

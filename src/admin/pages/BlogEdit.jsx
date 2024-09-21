@@ -121,6 +121,8 @@ const BlogEdit = () => {
                 fetchBlogs();
                 resetForm();
             }
+            fetchBlogs();
+            resetForm();
         } catch (error) {
             console.log("Error Saving blog", error);
         }

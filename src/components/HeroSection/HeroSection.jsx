@@ -16,13 +16,13 @@ const HeroSection = ({
                         autoPlay={true}
                         loop
                         muted
-                        className="absolute top-0 left-0  w-full h-full object-cover"
+                        className="absolute top-0 left-0  w-full h-[90vh] object-cover"
                     >
                         <source src={bgVideo} type="video/mp4" />
                     </video>
                 )}
                 <div
-                    className={`${overlayClassName} absolute top-0 left-0 w-full h-full`}
+                    className={`${overlayClassName} absolute top-0 left-0 w-full h-[90vh]`}
                 >
                     <div className="relative flex items-center px-3 justify-center h-full text-center flex-col lg:container lg:px-40 mx-auto w-full md:w-4/5">
                         {heroHeading && (

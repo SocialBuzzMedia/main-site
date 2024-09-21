@@ -16,7 +16,7 @@ const Footer = () => {
     ];
     return (
         <>
-            <div className="md:w-3/4 mx-auto py-8">
+            <div className="md:w-3/4 mx-auto py-8 border-t border-red-600">
                 <div className="flex lg:flex-row flex-col justify-between items-center gap-8 ">
                     <div className="cursor-pointer md:mr-8">
                         <NavLink to={`/`}>
@@ -39,19 +39,19 @@ const Footer = () => {
                             to={`https://www.facebook.com/Thesocialbuzzmedia`}
                             className={`mx-2`}
                         >
-                            <BsFacebook size={40} />
+                            <BsFacebook size={30} />
                         </NavLink>
                         <NavLink
                             to={`https://www.instagram.com/soicalbuzzmedia/`}
                             className={`mx-2`}
                         >
-                            <BsInstagram size={40} />
+                            <BsInstagram size={30} />
                         </NavLink>
                         <NavLink
                             to={`https://www.linkedin.com/company/socialbuzzmedia`}
                             className={`mx-2`}
                         >
-                            <BsLinkedin size={40} />
+                            <BsLinkedin size={30} />
                         </NavLink>
                     </div>
                 </div>
@@ -60,7 +60,9 @@ const Footer = () => {
                 </div>
                 <div className="text-center md:text-xl">
                     &copy; {getCurrentYear()} All Rights Reserved |{" "}
-                    <span className="text-red-500">Social Buzz Media</span>
+                    <span className="text-red-500 font-semibold">
+                        Social Buzz Media
+                    </span>
                 </div>
             </div>
         </>

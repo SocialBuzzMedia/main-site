@@ -23,8 +23,8 @@ const ContactModalForm = ({ isModalOpen, isModalClose }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const formUrl = `${import.meta.env.VITE_WEB3URL}`; //"https://api.web3forms.com/submit";
-        const accessKey = `${import.meta.env.VITE_WEB3TOKEN}`; //"68130282-b00a-4e5f-be53-540e3f46089a";
+        const formUrl = `${import.meta.env.VITE_WEB3URL}`;
+        const accessKey = `${import.meta.env.VITE_WEB3TOKEN}`;
 
         const payload = {
             access_key: accessKey,
@@ -84,7 +84,7 @@ const ContactModalForm = ({ isModalOpen, isModalClose }) => {
         <>
             {isModalOpen && (
                 <div className="fixed z-50 bg-black bg-opacity-70 inset-0 flex items-center justify-center">
-                    <div className="bg-overlay-a rounded-xl shadow-lg shadow-gray-500 px-4 relative">
+                    <div className="bg-slate-600 rounded-xl shadow-lg shadow-gray-500 px-4 relative">
                         <button
                             onClick={isModalClose}
                             className="absolute top-0 right-0  "

@@ -58,7 +58,7 @@ const Navbar = () => {
                             >
                                 <NavLink
                                     to={link.link}
-                                    className="text-gray-600 active:text-red-600 hover:border-b-red-600 hover:border-b-4 hover:border-solid hover:text-red-600 duration-300 font-medium "
+                                    className="text-gray-600 active:text-red-600 hover:text-red-600 duration-300 font-medium "
                                 >
                                     {link.name}
                                 </NavLink>

@@ -116,8 +116,9 @@ const Contact = () => {
                 heroSubHeading={heroSection.description}
                 overlayClassName={`home-overlay`}
             />
-            <div className="lg:w-3/4 w-full flex justify-center items-center flex-col md:flex-row gap-14 mx-auto my-4 py-5 ">
-                <div className="about-overlay lg:w-1/2 px-5 rounded-md py-5 mx-5 ">
+            <div className="lg:w-11/12 w-full flex justify-center items-center flex-col lg:flex-row gap-14 mx-auto my-4 py-5 ">
+                {/* Contact Form Container */}
+                <div className="about-overlay lg:w-1/2 md:w-9/12 px-5 rounded-md py-5 mx-5 ">
                     <Headings
                         title={`Feel Free to Message Us`}
                         className={`text-white mb-5`}
@@ -125,7 +126,7 @@ const Contact = () => {
 
                     {/* Contact Form */}
                     <form
-                        className="mx-auto lg:w-3/4 w-full"
+                        className="mx-auto lg:w-11/12 md:w-10/12 w-full"
                         onSubmit={handleSubmit}
                     >
                         <input
@@ -234,7 +235,9 @@ const Contact = () => {
                         {/* <span>{formResult}</span> */}
                     </form>
                 </div>
-                <div className=" lg:w-1/2 px-5 py-5 ">
+
+                {/* Contact Information */}
+                <div className=" lg:w-6/12 md:w-8/12 px-5 py-5 ">
                     <div className="text-center bg-red-500 text-white my-5 text-2xl py-6 px-2 rounded-lg shadow-lg flex justify-center items-center flex-col gap-3">
                         <SiGooglemaps size={50} />
                         <h2>Our Address</h2>

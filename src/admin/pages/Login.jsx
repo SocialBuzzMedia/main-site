@@ -1,13 +1,14 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 // import { NavLink } from "react-router-dom";
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -18,7 +19,14 @@ const Login = () => {
                 { withCredentials: true }
             );
             if (res.status === 200) {
-                navigate("/admin/dashboard");
+                Swal.fire({
+                    title: "Login Successful",
+                    icon: "success",
+                    confirmButtonText: "Continue to Dashboard",
+                }).then(() => {
+                    window.location.href = "/admin/dashboard";
+                });
+                // navigate("/admin/dashboard");
             }
         } catch (error) {
             setError(error.response.data.message);

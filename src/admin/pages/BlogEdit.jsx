@@ -3,6 +3,7 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 
 // import CreateBlog from "../components/CreateBlog";
 import HelmetWrapper from "../../components/HelmetProviderComponent/HelmetWrapper";
@@ -109,6 +110,13 @@ const BlogEdit = () => {
                         },
                     }
                 );
+                Swal.fire({
+                    title: "Yeh-hey !",
+                    text: "Blog Updated SuccessFully",
+                    icon: "success",
+                }).then(() => {
+                    window.location.href = "/admin/edit-blog";
+                });
                 fetchBlogs();
                 resetForm();
             } else {
@@ -117,6 +125,13 @@ const BlogEdit = () => {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     },
+                });
+                Swal.fire({
+                    title: "Yeh-hey !",
+                    text: "Blog Added SuccessFully",
+                    icon: "success",
+                }).then(() => {
+                    window.location.href = "/admin/edit-blog";
                 });
                 fetchBlogs();
                 resetForm();
@@ -148,6 +163,13 @@ const BlogEdit = () => {
         try {
             await axios.delete(`http://localhost:4000/api/blogs/${blogId}`);
             // refresh the blog list after deletion
+            Swal.fire({
+                title: "Yeh-hey !",
+                text: "Blog Deleted SuccessFully",
+                icon: "success",
+            }).then(() => {
+                window.location.href = "/admin/edit-blog";
+            });
             fetchBlogs();
         } catch (error) {
             console.log("Error Deleting Blog", error);

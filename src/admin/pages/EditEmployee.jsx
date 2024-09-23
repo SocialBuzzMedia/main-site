@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import HelmetWrapper from "../../components/HelmetProviderComponent/HelmetWrapper";
+import Swal from "sweetalert2";
 
 const EditEmployee = () => {
     const [employee, setEmployee] = useState([]);
@@ -59,11 +60,25 @@ const EditEmployee = () => {
                     data,
                     { headers: { "Content-Type": "multipart/form-data" } }
                 );
+                Swal.fire({
+                    title: "Yeh-hey !",
+                    text: "Employee Data Updated SuccessFully",
+                    icon: "success",
+                }).then(() => {
+                    window.location.href = "/admin/edit-employees";
+                });
                 fetchEmployees();
                 resetForm();
             } else {
                 await axios.post(`http://localhost:4000/api/employee`, data, {
                     headers: { "Content-Type": "multipart/form-data" },
+                });
+                Swal.fire({
+                    title: "Yeh-hey !",
+                    text: "Employee Data Created SuccessFully",
+                    icon: "success",
+                }).then(() => {
+                    window.location.href = "/admin/edit-employees";
                 });
                 fetchEmployees();
                 resetForm();
@@ -90,6 +105,14 @@ const EditEmployee = () => {
             await axios.delete(
                 `http://localhost:4000/api/employee/${employeeId}`
             );
+            Swal.fire({
+                title: "Yeh-hey !",
+                text: "Employee Data Deleted SuccessFully",
+                icon: "success",
+                iconColor: "red",
+            }).then(() => {
+                window.location.href = "/admin/edit-employees";
+            });
             fetchEmployees();
         } catch (error) {
             console.log("Error deleting employee", error);

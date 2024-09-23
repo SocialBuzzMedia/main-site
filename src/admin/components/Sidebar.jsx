@@ -7,6 +7,7 @@ import { TbDeviceVisionPro, TbListDetails } from "react-icons/tb";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { IoLogOut } from "react-icons/io5";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const Sidebar = () => {
     const navigate = useNavigate();
@@ -19,6 +20,12 @@ const Sidebar = () => {
                 {},
                 { withCredentials: true }
             );
+            Swal.fire({
+                title: "Logged Out Successfully",
+                icon: "success",
+                confirmButtonText: "Okay",
+                confirmButtonColor: "red",
+            });
 
             navigate("/admin/login");
         } catch (error) {
@@ -27,7 +34,7 @@ const Sidebar = () => {
     };
     return (
         <div>
-            <div className="lg:w-52 w-20 fixed top-0 bottom-0 left-0 bg-white">
+            <div className="lg:w-52 w-20 fixed top-0 bottom-0 left-0 bg-white border-r-[1px] border-gray-200">
                 <div className="my-10 px-4">
                     <NavLink to={"/admin"}>
                         <img
@@ -50,7 +57,7 @@ const Sidebar = () => {
                     >
                         {" "}
                         <IoLogOut size={40} />
-                        <span>Logout</span>
+                        <span className="lg:block hidden">Logout</span>
                     </button>
                 </div>
                 <hr className="mb-10 shadow-md" />

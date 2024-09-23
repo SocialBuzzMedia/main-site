@@ -3,6 +3,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import HelmetWrapper from "../../components/HelmetProviderComponent/HelmetWrapper";
+import Swal from "sweetalert2";
 
 const AboutEdit = () => {
     const [about, setAbout] = useState([]);
@@ -61,6 +62,13 @@ const AboutEdit = () => {
                         },
                     }
                 );
+                Swal.fire({
+                    title: "Yeh-hey !",
+                    text: "About Section Updated SuccessFully",
+                    icon: "success",
+                }).then(() => {
+                    window.location.href = "/admin/edit-about";
+                });
                 fetchAbouts();
                 resetForm();
             } else {
@@ -69,6 +77,15 @@ const AboutEdit = () => {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     },
+                });
+                Swal.fire({
+                    title: "Yeh-hey !",
+                    text: "About Section Created SuccessFully",
+                    icon: "success",
+                    confirmButtonText: "Okay",
+                    confirmButtonColor: "Red",
+                }).then(() => {
+                    window.location.href = "/admin/edit-about";
                 });
                 fetchAbouts();
                 resetForm();
@@ -94,6 +111,13 @@ const AboutEdit = () => {
     const handleDelete = async (aboutId) => {
         try {
             await axios.delete(`http://localhost:4000/api/about/${aboutId}`);
+            Swal.fire({
+                title: "Yeh-hey !",
+                text: "About Section Deleted SuccessFully",
+                icon: "success",
+            }).then(() => {
+                window.location.href = "/admin/edit-about";
+            });
             fetchAbouts();
         } catch (error) {
             console.log("Error Deleting About", error);

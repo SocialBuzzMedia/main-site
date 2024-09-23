@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import HelmetWrapper from "../../components/HelmetProviderComponent/HelmetWrapper";
+import Swal from "sweetalert2";
 
 const ServicesEdit = () => {
     const [services, setServices] = useState([]);
@@ -74,10 +75,24 @@ const ServicesEdit = () => {
                     `http://localhost:4000/api/service/${editingServiceId}`,
                     data
                 );
+                Swal.fire({
+                    title: "Yeh-hey !",
+                    text: "Service Data Updated SuccessFully",
+                    icon: "success",
+                }).then(() => {
+                    window.location.href = "/admin/edit-services";
+                });
                 fetchServices();
                 resetForm();
             } else {
                 await axios.post("http://localhost:4000/api/service", data);
+                Swal.fire({
+                    title: "Yeh-hey !",
+                    text: "Service Data Created SuccessFully",
+                    icon: "success",
+                }).then(() => {
+                    window.location.href = "/admin/edit-services";
+                });
                 fetchServices();
                 resetForm();
             }
@@ -105,6 +120,14 @@ const ServicesEdit = () => {
     const handleDelete = async (id) => {
         try {
             await axios.delete(`http://localhost:4000/api/service/${id}`);
+            Swal.fire({
+                title: "Yeh-hey !",
+                text: "Service Data Deleted SuccessFully",
+                icon: "success",
+                iconColor: "red",
+            }).then(() => {
+                window.location.href = "/admin/edit-services";
+            });
             fetchServices();
         } catch (error) {
             console.log("Error Deleting Service : ", error);

@@ -120,7 +120,7 @@ We will work together to revamp your online presence and promote your message so
                     // className={`text-white`}
                     // classNameDesc={`text-white`}
                 />
-                <div className="md:w-11/12 mx-auto">
+                <div className="lg:w-9/12 w-11/12 mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-5 mx-auto md:mx-2 ">
                         {aboutSection.map((about) => (
                             <AboutCard key={about._id} about={about} />
@@ -142,7 +142,7 @@ We will work together to revamp your online presence and promote your message so
                             classNameDesc={`text-black`}
                         />
                     </div>
-                    <div className=" ">
+                    <div className=" lg:w-9/12 w-11/12">
                         {/* Team Members     */}
                         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 m-8">
                             {employeeSection.map((emp) => (

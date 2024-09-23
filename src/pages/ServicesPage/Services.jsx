@@ -29,12 +29,6 @@ const Services = () => {
             });
     }, []);
 
-    // useEffect(() => {
-    //     fetch("/ServicesCard.json")
-    //         .then((response) => response.json())
-    //         .then((data) => setServiceSection(data));
-    // }, []);
-
     useEffect(() => {
         const fetchService = async () => {
             const response = await axios.get(
@@ -63,7 +57,7 @@ const Services = () => {
                 />
             </div>
             {/* Services section Section */}
-            <div className="md:w-3/4 mx-auto">
+            <div className="">
                 <div className="py-10">
                     <Headings
                         title={`Our Services`}
@@ -71,14 +65,16 @@ const Services = () => {
                             "We provide personalized digital marketing plans that boost brand recognition and interaction on various online channels."
                         }
                     />
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 m-8 py-6">
-                        {serviceSection.map((data) => (
-                            <ServiceCard
-                                key={data._id}
-                                services={data}
-                                slugText={"Read More"}
-                            />
-                        ))}
+                    <div className="lg:w-9/12 w-11/12 mx-auto mt-9">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 m-8 py-6">
+                            {serviceSection.map((data) => (
+                                <ServiceCard
+                                    key={data._id}
+                                    services={data}
+                                    slugText={"Read More"}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

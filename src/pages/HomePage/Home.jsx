@@ -74,7 +74,7 @@ const Home = () => {
                         "We provide personalized digital marketing plans that boost brand recognition and interaction on various online channels."
                     }
                 />
-                <div className="md:w-11/12 mx-auto">
+                <div className="lg:w-9/12 w-11/12 mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-5 mx-auto md:mx-2 ">
                         {serviceSection &&
                             serviceSection.length > 0 &&
@@ -93,7 +93,7 @@ const Home = () => {
             <hr className="w-9/12 mx-auto" />
 
             {/* Why Choose Us Section */}
-            <div>
+            <div className="">
                 <div className="py-10 ">
                     <Headings
                         title={`Why Choose Us`}
@@ -103,7 +103,7 @@ const Home = () => {
                         className={`text-red-500`}
                         classNameDesc={`text-black`}
                     />
-                    <div className="md:w-11/12 mx-auto mt-4">
+                    <div className="lg:w-9/12 w-11/12 mx-auto mt-9">
                         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-7 mx-auto md:mx-2  ">
                             {aboutSection &&
                                 aboutSection.length > 0 &&

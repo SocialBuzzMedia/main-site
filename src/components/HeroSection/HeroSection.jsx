@@ -24,7 +24,7 @@ const HeroSection = ({
                 <div
                     className={`${overlayClassName} absolute top-0 left-0 w-full h-[90vh]`}
                 >
-                    <div className="relative flex items-center px-3 justify-center h-full text-center flex-col lg:container lg:px-40 mx-auto w-full md:w-4/5">
+                    <div className="relative flex items-center px-3 justify-center h-full text-center flex-col lg:container lg:px-40 mx-auto w-full md:w-11/12">
                         {heroHeading && (
                             <h1 className="text-white md:text-6xl text-4xl font-medium capitalize">
                                 {heroHeading}

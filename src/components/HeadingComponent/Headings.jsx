@@ -11,7 +11,7 @@ const Headings = ({ title, description, className, classNameDesc }) => {
                 )}
                 {description && (
                     <p
-                        className={`md:text-2xl text-xl md:w-3/4 text-gray-800 mx-auto mt-5 ${classNameDesc}`}
+                        className={`md:text-2xl text-xl md:w-11/12 text-gray-800 mx-auto mt-5 ${classNameDesc}`}
                     >
                         {description}
                     </p>

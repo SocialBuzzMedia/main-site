@@ -17,7 +17,7 @@ const AboutUsSections = ({
                     <div className="lg:block hidden">
                         <img src={image} alt="" />
                     </div>
-                    <div className="lg:w-1/2 w-3/4 mx-auto">
+                    <div className="lg:w-6/12 w-9/12 mx-auto">
                         <p
                             className={`text-6xl mb-5 font-medium ${headingFontColor}`}
                         >

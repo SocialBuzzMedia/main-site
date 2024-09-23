@@ -68,7 +68,7 @@ const About = () => {
             </div>
 
             {/* Our Vision */}
-            <div>
+            <div className="mt-5">
                 <AboutUsSections
                     image={image}
                     heading={`Our Vision`}
@@ -87,8 +87,10 @@ Let's team up to build your place as an expert in this digital age, where succes
                 />
             </div>
 
+            <hr className="w-9/12 mx-auto" />
+
             {/* Our Mission */}
-            <div className="bg-red-400">
+            <div className="mt-5 mb-3">
                 <AboutUsSections
                     image={image}
                     heading={`Our Mission`}
@@ -101,12 +103,15 @@ We are committed to dealing with the complexities of the digital world so that y
 We will work together to revamp your online presence and promote your message so that your brand grows online rather than merely existing. Join us on the path to digital excellence, where your success is our priority!
 `}
                     aboutDirection={`flex-row-reverse`}
-                    headingFontColor={`text-white`}
-                    descriptionFontColor={`text-white`}
+                    headingFontColor={`text-red-500`}
+                    descriptionFontColor={`text-black`}
                 />
             </div>
+
+            <hr className="w-9/12 mx-auto" />
+
             {/* Why Choose Us */}
-            <div className="py-10 ">
+            <div className="py-10 mt-5">
                 <Headings
                     title={`Why Choose Us`}
                     description={
@@ -125,15 +130,16 @@ We will work together to revamp your online presence and promote your message so
             </div>
 
             {/* Our Teams Section */}
+            <hr className="w-9/12 mx-auto" />
 
-            <div className="about-overlay py-10">
+            <div className=" py-10">
                 <div className="container w-3/4 mx-auto">
                     <div>
                         <Headings
                             title={`Our Team`}
                             description={`Our experienced team combines expertise, innovation, and dedication to deliver exceptional outcomes and assistance.`}
-                            className={`text-white`}
-                            classNameDesc={`text-white`}
+                            className={`text-red-500`}
+                            classNameDesc={`text-black`}
                         />
                     </div>
                     <div className=" ">

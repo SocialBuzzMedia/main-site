@@ -28,7 +28,6 @@ const Blogs = () => {
             {/* Blog Hero Section */}
             <HeroSection
                 heroHeading={`Welcome to Blogs of Social Buzz Media`}
-                heroSubHeading={`Stay Tuned ...`}
                 overlayClassName={`bg-overlay-a`}
             />
 

@@ -65,6 +65,7 @@ const Home = () => {
                     overlayClassName={`home-overlay`}
                 />
             </div>
+
             {/* What We do Section */}
             <div className="py-10">
                 <Headings
@@ -89,20 +90,21 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <hr className="w-9/12 mx-auto" />
 
             {/* Why Choose Us Section */}
             <div>
-                <div className="py-10 bg-red-400 ">
+                <div className="py-10 ">
                     <Headings
                         title={`Why Choose Us`}
                         description={
                             "At Social Buzz Media, our goal is to provide exceptional results and unmatched customer support. Why selecting us will be the right choice for your business."
                         }
-                        className={`text-white`}
-                        classNameDesc={`text-white`}
+                        className={`text-red-500`}
+                        classNameDesc={`text-black`}
                     />
-                    <div className="md:w-11/12 mx-auto">
-                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-5 mx-auto md:mx-2  ">
+                    <div className="md:w-11/12 mx-auto mt-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-7 mx-auto md:mx-2  ">
                             {aboutSection &&
                                 aboutSection.length > 0 &&
                                 aboutSection.map((data) => {
@@ -117,6 +119,8 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+
+                <hr className="w-9/12 mx-auto" />
 
                 {/* Client Carousel */}
                 <div className="bg-white py-10">

@@ -23,8 +23,8 @@ const ContactModalForm = ({ isModalOpen, isModalClose }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const formUrl = "https://api.web3forms.com/submit";
-        const accessKey = "68130282-b00a-4e5f-be53-540e3f46089a";
+        const formUrl = `${import.meta.env.VITE_WEB3URL}`; //"https://api.web3forms.com/submit";
+        const accessKey = `${import.meta.env.VITE_WEB3TOKEN}`; //"68130282-b00a-4e5f-be53-540e3f46089a";
 
         const payload = {
             access_key: accessKey,

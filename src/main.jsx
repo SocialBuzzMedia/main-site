@@ -26,6 +26,7 @@ import EditEmployee from "./admin/pages/EditEmployee.jsx";
 import Login from "./admin/pages/Login.jsx";
 // import Register from "./admin/pages/Register.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import ClientScroll from "./admin/pages/ClientScroll.jsx";
 
 const routers = createBrowserRouter(
     createRoutesFromElements(
@@ -60,6 +61,7 @@ const routers = createBrowserRouter(
                 />
                 <Route path="edit-services" element={<ServicesEdit />} />
                 <Route path="edit-employees" element={<EditEmployee />} />
+                <Route path="edit-clients" element={<ClientScroll />} />
             </Route>
         </>
     )

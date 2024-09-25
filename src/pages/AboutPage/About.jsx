@@ -17,10 +17,12 @@ const About = () => {
     const [employeeSection, setEmployeeSection] = useState([]);
     const [heroSection, setHeroSection] = useState([]);
 
+    // to move to the top of the page on page load
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
+    // Fetching taglines
     useEffect(() => {
         fetch("/TagLines.json")
             .then((res) => res.json())
@@ -30,6 +32,7 @@ const About = () => {
             });
     }, []);
 
+    // Fetching about us sections
     useEffect(() => {
         const fetchAbout = async () => {
             const response = await axios.get(
@@ -40,6 +43,7 @@ const About = () => {
         fetchAbout();
     }, []);
 
+    // Fetch our teams section data
     useEffect(() => {
         const fetchEmployee = async () => {
             const response = await axios.get(

@@ -23,7 +23,7 @@ const EditEmployee = () => {
     const fetchEmployees = async () => {
         try {
             const response = await axios.get(
-                `http://localhost:4000/api/employee`
+                `${import.meta.env.VITE_LOCAL_URL}/api/employee`
             );
             setEmployee(response.data);
         } catch (error) {
@@ -56,7 +56,9 @@ const EditEmployee = () => {
         try {
             if (editMode) {
                 await axios.put(
-                    `http://localhost:4000/api/employee/${currentEmployeeId}`,
+                    `${
+                        import.meta.env.VITE_LOCAL_URL
+                    }/api/employee/${currentEmployeeId}`,
                     data,
                     { headers: { "Content-Type": "multipart/form-data" } }
                 );
@@ -70,9 +72,13 @@ const EditEmployee = () => {
                 fetchEmployees();
                 resetForm();
             } else {
-                await axios.post(`http://localhost:4000/api/employee`, data, {
-                    headers: { "Content-Type": "multipart/form-data" },
-                });
+                await axios.post(
+                    `${import.meta.env.VITE_LOCAL_URL}/api/employee`,
+                    data,
+                    {
+                        headers: { "Content-Type": "multipart/form-data" },
+                    }
+                );
                 Swal.fire({
                     title: "Yeh-hey !",
                     text: "Employee Data Created SuccessFully",
@@ -103,7 +109,7 @@ const EditEmployee = () => {
     const handleDelete = async (employeeId) => {
         try {
             await axios.delete(
-                `http://localhost:4000/api/employee/${employeeId}`
+                `${import.meta.env.VITE_LOCAL_URL}/api/employee/${employeeId}`
             );
             Swal.fire({
                 title: "Yeh-hey !",

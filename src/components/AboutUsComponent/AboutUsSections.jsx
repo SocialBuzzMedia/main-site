@@ -15,7 +15,7 @@ const AboutUsSections = ({
                     className={`flex justify-center items-center gap-11 py-10 ${aboutDirection}`}
                 >
                     <div className="lg:block hidden">
-                        <img src={image} alt="" />
+                        <img src={image} alt={heading} />
                     </div>
                     <div className="lg:w-6/12 w-9/12 mx-auto">
                         <p

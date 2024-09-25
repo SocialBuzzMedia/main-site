@@ -5,6 +5,7 @@ import { ImBlog } from "react-icons/im";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { TbDeviceVisionPro, TbListDetails } from "react-icons/tb";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
+import { IoMdPeople } from "react-icons/io";
 import { IoLogOut } from "react-icons/io5";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -62,6 +63,7 @@ const Sidebar = () => {
                 </div>
                 <hr className="mb-10 shadow-md" />
                 <ul className="flex flex-col gap-5 mx-4">
+                    {/* Link to edit or create blog */}
                     <li className="mb-3">
                         <Link
                             to="/admin/edit-blog"
@@ -73,6 +75,8 @@ const Sidebar = () => {
                             <p className="lg:block hidden">Edit Blog</p>
                         </Link>
                     </li>
+
+                    {/* Link to edit or create About Card */}
                     <li className="mb-3">
                         <Link
                             to="/admin/edit-about"
@@ -84,6 +88,8 @@ const Sidebar = () => {
                             <p className="lg:block hidden">Edit About Card</p>
                         </Link>
                     </li>
+
+                    {/* Link to edit or create Vision And Mission */}
                     <li className="mb-3">
                         <Link
                             to="/admin/edit-vision-mission"
@@ -97,6 +103,8 @@ const Sidebar = () => {
                             </p>
                         </Link>
                     </li>
+
+                    {/* Link to edit or create Services */}
                     <li className="mb-3">
                         <Link
                             to="/admin/edit-services"
@@ -108,6 +116,8 @@ const Sidebar = () => {
                             <p className="lg:block hidden">Edit Services</p>
                         </Link>
                     </li>
+
+                    {/* Link to edit or create Employee  */}
                     <li className="mb-3">
                         <Link
                             to="/admin/edit-employees"
@@ -118,6 +128,21 @@ const Sidebar = () => {
                             </span>
                             <p className="lg:block hidden">
                                 Edit Employee Details
+                            </p>
+                        </Link>
+                    </li>
+
+                    {/* Link to edit or create Client Scroll Card  */}
+                    <li className="mb-3">
+                        <Link
+                            to="/admin/edit-clients"
+                            className="text-lg hover:text-gray-400 flex items-center"
+                        >
+                            <span className="me-4">
+                                <IoMdPeople size={30} />
+                            </span>
+                            <p className="lg:block hidden">
+                                Edit Clients Details
                             </p>
                         </Link>
                     </li>

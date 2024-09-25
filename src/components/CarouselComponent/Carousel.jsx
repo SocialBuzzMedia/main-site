@@ -4,17 +4,36 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "./Carousel.css";
 
-import angel_logo from "/images/angel-logo.png";
-import bhsbc_logo from "/images/bhsbc_logo.png";
-import brandmates_logo from "/images/brandmates_logo.jpg";
-import brdc_logo from "/images/brdc_logo.jpg";
-import drHasan_logo from "/images/dr_hasan_logo.png";
-import greenTrends_logo from "/images/greentrends_logo.png";
-import pinakiRay_logo from "/images/pinaki_ray_logo.jpeg";
-import realmeStore_logo from "/images/realme_logo.png";
-import wb66_logo from "/images/wb66_logo.png";
+// import angel_logo from "/images/angel-logo.png";
+// import bhsbc_logo from "/images/bhsbc_logo.png";
+// import brandmates_logo from "/images/brandmates_logo.jpg";
+// import brdc_logo from "/images/brdc_logo.jpg";
+// import drHasan_logo from "/images/dr_hasan_logo.png";
+// import greenTrends_logo from "/images/greentrends_logo.png";
+// import pinakiRay_logo from "/images/pinaki_ray_logo.jpeg";
+// import realmeStore_logo from "/images/realme_logo.png";
+// import wb66_logo from "/images/wb66_logo.png";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Carousel = () => {
+    const [carousel, setCarousel] = useState([]);
+
+    // Fetch Clients Carousel Data
+    useEffect(() => {
+        const fetchImages = async () => {
+            try {
+                const response = await axios.get(
+                    `${import.meta.env.VITE_LOCAL_URL}/api/client`
+                );
+                setCarousel(response.data);
+            } catch (error) {
+                console.log("error fetching carousel", error);
+            }
+        };
+        fetchImages();
+    }, []);
+
     var settings = {
         infinite: true,
         slidesToShow: 4,
@@ -52,83 +71,28 @@ const Carousel = () => {
             },
         ],
     };
+
     return (
         <>
             <div className="slider-container ">
-                <Slider {...settings}>
-                    <div>
-                        <img
-                            src={angel_logo}
-                            alt=""
-                            width={200}
-                            className="img-fluid"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src={bhsbc_logo}
-                            alt=""
-                            width={200}
-                            className="img-fluid"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src={brandmates_logo}
-                            alt=""
-                            width={200}
-                            className="img-fluid"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src={brdc_logo}
-                            alt=""
-                            width={200}
-                            className="img-fluid"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src={drHasan_logo}
-                            alt=""
-                            width={200}
-                            className="img-fluid"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src={greenTrends_logo}
-                            alt=""
-                            width={200}
-                            className="img-fluid"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src={pinakiRay_logo}
-                            alt=""
-                            width={200}
-                            className="img-fluid"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src={realmeStore_logo}
-                            alt=""
-                            width={200}
-                            className="img-fluid"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src={wb66_logo}
-                            alt=""
-                            width={200}
-                            className="img-fluid"
-                        />
-                    </div>
-                </Slider>
+                {carousel.length > 0 ? (
+                    <Slider {...settings}>
+                        {carousel.map((image) => (
+                            <div key={image._id}>
+                                <img
+                                    src={`${import.meta.env.VITE_LOCAL_URL}/${
+                                        image.image
+                                    }`}
+                                    alt={image.name}
+                                    width={200}
+                                    className="img-fluid"
+                                />
+                            </div>
+                        ))}
+                    </Slider>
+                ) : (
+                    <p> loading images</p>
+                )}
             </div>
         </>
     );

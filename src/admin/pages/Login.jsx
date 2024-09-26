@@ -1,8 +1,8 @@
+// import { NavLink } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-// import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-// import { NavLink } from "react-router-dom";
 import logo from "../assets/socialBuzzMedia.png";
 
 const Login = () => {

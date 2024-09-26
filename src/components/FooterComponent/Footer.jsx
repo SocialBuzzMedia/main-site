@@ -28,7 +28,7 @@ const Footer = () => {
                             <NavLink
                                 key={link.name}
                                 to={link.link}
-                                className="text-gray-600 hover:text-red-600 duration-300 font-medium sm:text-sm xl:text-lg text-center mx-6 "
+                                className="text-gray-600 hover:text-red-600 duration-300 font-medium sm:text-sm xl:text-md text-center mx-6 "
                             >
                                 {link.name}
                             </NavLink>

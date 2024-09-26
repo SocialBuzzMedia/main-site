@@ -23,7 +23,9 @@ const AboutEdit = () => {
     // fetch all blogs from server
     const fetchAbouts = async () => {
         try {
-            const response = await fetch(`http://localhost:4000/api/about`);
+            const response = await fetch(
+                `${import.meta.env.VITE_LOCAL_URL}/api/about`
+            );
             setAbout(await response.json());
         } catch (error) {
             console.log("Error Fetching Blogs", error);
@@ -54,7 +56,9 @@ const AboutEdit = () => {
         try {
             if (editMode) {
                 await axios.put(
-                    `http://localhost:4000/api/about/${currentAboutId}`,
+                    `${
+                        import.meta.env.VITE_LOCAL_URL
+                    }/api/about/${currentAboutId}`,
                     formData,
                     {
                         headers: {
@@ -73,11 +77,15 @@ const AboutEdit = () => {
                 resetForm();
             } else {
                 // Create new blog
-                await axios.post(`http://localhost:4000/api/about`, formData, {
-                    headers: {
-                        "Content-Type": "multipart/form-data",
-                    },
-                });
+                await axios.post(
+                    `${import.meta.env.VITE_LOCAL_URL}/api/about`,
+                    formData,
+                    {
+                        headers: {
+                            "Content-Type": "multipart/form-data",
+                        },
+                    }
+                );
                 Swal.fire({
                     title: "Yeh-hey !",
                     text: "About Section Created SuccessFully",
@@ -110,7 +118,9 @@ const AboutEdit = () => {
     // Handle Delete
     const handleDelete = async (aboutId) => {
         try {
-            await axios.delete(`http://localhost:4000/api/about/${aboutId}`);
+            await axios.delete(
+                `${import.meta.env.VITE_LOCAL_URL}/api/about/${aboutId}`
+            );
             Swal.fire({
                 title: "Yeh-hey !",
                 text: "About Section Deleted SuccessFully",

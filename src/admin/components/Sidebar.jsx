@@ -36,12 +36,13 @@ const Sidebar = () => {
     return (
         <div>
             <div className="lg:w-52 w-20 fixed top-0 bottom-0 left-0 bg-white border-r-[1px] border-gray-200">
-                <div className="my-10 px-4">
+                <div className="my-4 px-4">
                     <NavLink to={"/admin"}>
                         <img
                             src={logo}
                             alt="Social Buzz Media Admin Desk"
                             className="lg:block hidden"
+                            width={150}
                         />
                         <img
                             src={smallLogo}

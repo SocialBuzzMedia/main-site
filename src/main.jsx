@@ -27,6 +27,7 @@ import Login from "./admin/pages/Login.jsx";
 // import Register from "./admin/pages/Register.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import ClientScroll from "./admin/pages/ClientScroll.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 
 const routers = createBrowserRouter(
     createRoutesFromElements(
@@ -46,6 +47,7 @@ const routers = createBrowserRouter(
                 <Route path="blog" element={<Blogs />} />
                 <Route path="/blog/:slug" element={<BlogDescriptions />} />
                 <Route path="contact-us" element={<Contact />} />
+                <Route path="privacy-policy" element={<PrivacyPolicy />} />
             </Route>
 
             {/* Admin Routes */}

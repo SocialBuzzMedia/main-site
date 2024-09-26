@@ -3,6 +3,7 @@ import axios from "axios";
 // import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 // import { NavLink } from "react-router-dom";
+import logo from "../assets/socialBuzzMedia.png";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -34,10 +35,14 @@ const Login = () => {
     };
 
     return (
-        <div className="flex items-center justify-center h-screen bg-gray-100">
+        <div className="flex items-center justify-center h-screen bg-gray-100 flex-col gap-12">
+            <div className="block">
+                <img src={logo} width={200} className="" />
+            </div>
+
             <form
                 onSubmit={handleSubmit}
-                className="bg-white p-6 rounded shadow-md w-3/12 border-red-300 border"
+                className="bg-white p-6 rounded shadow-md lg:w-3/12 border-red-300 border"
             >
                 <h2 className="text-2xl text-center text-red-500 font-semibold mb-4">
                     Admin Login

@@ -53,21 +53,21 @@ const Sidebar = () => {
                 </div>
                 <div className=" mb-4">
                     <button
-                        className="flex items-center gap-2 mx-auto text-red-500 rounded-full border border-red-500 px-3 py-2 shadow-md"
+                        className="flex items-center gap-2 mx-auto text-red-500 rounded-lg border border-red-500 px-3 py-1 shadow-md"
                         onClick={handleLogout}
                     >
                         {" "}
-                        <IoLogOut size={40} />
+                        <IoLogOut size={30} />
                         <span className="lg:block hidden">Logout</span>
                     </button>
                 </div>
                 <hr className="mb-10 shadow-md" />
                 <ul className="flex flex-col gap-5 mx-4">
                     {/* Link to edit or create blog */}
-                    <li className="mb-3">
+                    <li className="mb-1">
                         <Link
                             to="/admin/edit-blog"
-                            className="text-lg hover:text-gray-400 flex items-center"
+                            className=" hover:text-gray-400 flex items-center"
                         >
                             <span className="me-4">
                                 <ImBlog size={30} />
@@ -77,10 +77,10 @@ const Sidebar = () => {
                     </li>
 
                     {/* Link to edit or create About Card */}
-                    <li className="mb-3">
+                    <li className="mb-1">
                         <Link
                             to="/admin/edit-about"
-                            className="text-lg hover:text-gray-400 flex items-center"
+                            className=" hover:text-gray-400 flex items-center"
                         >
                             <span className="me-4">
                                 <IoMdInformationCircleOutline size={30} />
@@ -90,10 +90,10 @@ const Sidebar = () => {
                     </li>
 
                     {/* Link to edit or create Vision And Mission */}
-                    <li className="mb-3">
+                    <li className="mb-1">
                         <Link
                             to="/admin/edit-vision-mission"
-                            className="text-lg hover:text-gray-400 flex items-center"
+                            className=" hover:text-gray-400 flex items-center"
                         >
                             <span className="me-4">
                                 <TbDeviceVisionPro size={30} />
@@ -105,10 +105,10 @@ const Sidebar = () => {
                     </li>
 
                     {/* Link to edit or create Services */}
-                    <li className="mb-3">
+                    <li className="mb-1">
                         <Link
                             to="/admin/edit-services"
-                            className="text-lg hover:text-gray-400 flex items-center"
+                            className=" hover:text-gray-400 flex items-center"
                         >
                             <span className="me-4">
                                 <MdOutlineMiscellaneousServices size={30} />
@@ -118,10 +118,10 @@ const Sidebar = () => {
                     </li>
 
                     {/* Link to edit or create Employee  */}
-                    <li className="mb-3">
+                    <li className="mb-1">
                         <Link
                             to="/admin/edit-employees"
-                            className="text-lg hover:text-gray-400 flex items-center"
+                            className=" hover:text-gray-400 flex items-center"
                         >
                             <span className="me-4">
                                 <TbListDetails size={30} />
@@ -133,10 +133,10 @@ const Sidebar = () => {
                     </li>
 
                     {/* Link to edit or create Client Scroll Card  */}
-                    <li className="mb-3">
+                    <li className="mb-1">
                         <Link
                             to="/admin/edit-clients"
-                            className="text-lg hover:text-gray-400 flex items-center"
+                            className=" hover:text-gray-400 flex items-center"
                         >
                             <span className="me-4">
                                 <IoMdPeople size={30} />

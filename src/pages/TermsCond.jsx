@@ -1,7 +1,12 @@
+import HelmetWrapper from "../components/HelmetProviderComponent/HelmetWrapper";
+
 const TermsCond = () => {
     return (
         <div>
-            {" "}
+            <HelmetWrapper
+                title="Terms and Conditions"
+                description="Welcome to socialbuzzmedia. Best digital Marketing agency that provides all digital media solutions sush as SEO, Social Media Marketing, Web development, Pay-per-click"
+            />
             <div className="min-h-screen  flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl w-full space-y-8 p-10 rounded-lg">
                     <h1 className="text-3xl font-bold text-gray-900">

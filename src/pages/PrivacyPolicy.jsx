@@ -1,6 +1,12 @@
+import HelmetWrapper from "../components/HelmetProviderComponent/HelmetWrapper";
+
 const PrivacyPolicy = () => {
     return (
         <div>
+            <HelmetWrapper
+                title="Privacy Policy"
+                description="Welcome to socialbuzzmedia. Best digital Marketing agency that provides all digital media solutions sush as SEO, Social Media Marketing, Web development, Pay-per-click"
+            />
             <div className=" p-6">
                 <div className="max-w-3xl mx-auto  p-8">
                     <h1 className="text-3xl font-bold mb-4 text-gray-800">

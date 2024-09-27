@@ -80,7 +80,7 @@ const ServicesEdit = () => {
                     text: "Service Data Updated SuccessFully",
                     icon: "success",
                 }).then(() => {
-                    window.location.href = "/admin/edit-services";
+                    window.location.href = "/basement/edit-services";
                 });
                 fetchServices();
                 resetForm();
@@ -91,7 +91,7 @@ const ServicesEdit = () => {
                     text: "Service Data Created SuccessFully",
                     icon: "success",
                 }).then(() => {
-                    window.location.href = "/admin/edit-services";
+                    window.location.href = "/basement/edit-services";
                 });
                 fetchServices();
                 resetForm();
@@ -126,7 +126,7 @@ const ServicesEdit = () => {
                 icon: "success",
                 iconColor: "red",
             }).then(() => {
-                window.location.href = "/admin/edit-services";
+                window.location.href = "/basement/edit-services";
             });
             fetchServices();
         } catch (error) {
@@ -225,6 +225,10 @@ const ServicesEdit = () => {
                     onChange={handleFileChange}
                     className="mb-4"
                 />
+                <p className="text-red-600 text-[11px]">
+                    Image size should be less than 1 MB <br /> Dimension should
+                    be 600X400 px
+                </p>
                 <input
                     type="text"
                     name="title"

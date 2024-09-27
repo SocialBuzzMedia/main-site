@@ -10,7 +10,7 @@ const Footer = () => {
 
     let Links = [
         { name: "Privacy Policy", link: "/privacy-policy" },
-        { name: "Terms & Conditions", link: "/term-and-condition" },
+        { name: "Terms & Conditions", link: "/terms-and-conditions" },
         { name: "Career", link: "/career" },
         { name: "Contact Us", link: "/contact-us" },
     ];

@@ -258,6 +258,10 @@ const BlogEdit = () => {
                             onChange={handleImageChange}
                             className="w-full p-2 border border-gray-300 rounded"
                         />
+                        <p className="text-red-600 text-[11px]">
+                            Image size should be less than 1 MB <br /> Dimension
+                            should be 1920X1080 px
+                        </p>
                         <input
                             type="text"
                             name="title"

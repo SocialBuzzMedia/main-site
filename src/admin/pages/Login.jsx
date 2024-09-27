@@ -25,7 +25,7 @@ const Login = () => {
                     icon: "success",
                     confirmButtonText: "Continue to Dashboard",
                 }).then(() => {
-                    window.location.href = "/admin/dashboard";
+                    window.location.href = "/basement/dashboard";
                 });
                 // navigate("/admin/dashboard");
             }

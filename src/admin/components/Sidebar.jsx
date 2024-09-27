@@ -28,7 +28,7 @@ const Sidebar = () => {
                 confirmButtonColor: "red",
             });
 
-            navigate("/admin/login");
+            navigate("/basement/login");
         } catch (error) {
             console.log("Logout Failed", error);
         }
@@ -37,7 +37,7 @@ const Sidebar = () => {
         <div>
             <div className="lg:w-52 w-20 fixed top-0 bottom-0 left-0 bg-white border-r-[1px] border-gray-200">
                 <div className="my-4 px-4">
-                    <NavLink to={"/admin"}>
+                    <NavLink to={"/basement"}>
                         <img
                             src={logo}
                             alt="Social Buzz Media Admin Desk"
@@ -67,7 +67,7 @@ const Sidebar = () => {
                     {/* Link to edit or create blog */}
                     <li className="mb-1">
                         <Link
-                            to="/admin/edit-blog"
+                            to="/basement/edit-blog"
                             className=" hover:text-gray-400 flex items-center"
                         >
                             <span className="me-4">
@@ -80,7 +80,7 @@ const Sidebar = () => {
                     {/* Link to edit or create About Card */}
                     <li className="mb-1">
                         <Link
-                            to="/admin/edit-about"
+                            to="/basement/edit-about"
                             className=" hover:text-gray-400 flex items-center"
                         >
                             <span className="me-4">
@@ -93,7 +93,7 @@ const Sidebar = () => {
                     {/* Link to edit or create Vision And Mission */}
                     <li className="mb-1">
                         <Link
-                            to="/admin/edit-vision-mission"
+                            to="/basement/edit-vision-mission"
                             className=" hover:text-gray-400 flex items-center"
                         >
                             <span className="me-4">
@@ -108,7 +108,7 @@ const Sidebar = () => {
                     {/* Link to edit or create Services */}
                     <li className="mb-1">
                         <Link
-                            to="/admin/edit-services"
+                            to="/basement/edit-services"
                             className=" hover:text-gray-400 flex items-center"
                         >
                             <span className="me-4">
@@ -121,7 +121,7 @@ const Sidebar = () => {
                     {/* Link to edit or create Employee  */}
                     <li className="mb-1">
                         <Link
-                            to="/admin/edit-employees"
+                            to="/basement/edit-employees"
                             className=" hover:text-gray-400 flex items-center"
                         >
                             <span className="me-4">
@@ -136,7 +136,7 @@ const Sidebar = () => {
                     {/* Link to edit or create Client Scroll Card  */}
                     <li className="mb-1">
                         <Link
-                            to="/admin/edit-clients"
+                            to="/basement/edit-clients"
                             className=" hover:text-gray-400 flex items-center"
                         >
                             <span className="me-4">

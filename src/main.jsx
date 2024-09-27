@@ -28,6 +28,7 @@ import Login from "./admin/pages/Login.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import ClientScroll from "./admin/pages/ClientScroll.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import TermsCond from "./pages/TermsCond.jsx";
 
 const routers = createBrowserRouter(
     createRoutesFromElements(
@@ -48,12 +49,13 @@ const routers = createBrowserRouter(
                 <Route path="/blog/:slug" element={<BlogDescriptions />} />
                 <Route path="contact-us" element={<Contact />} />
                 <Route path="privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="terms-and-conditions" element={<TermsCond />} />
             </Route>
 
             {/* Admin Routes */}
-            <Route path="/admin/login" element={<Login />} />
+            <Route path="/basement/login" element={<Login />} />
             {/* <Route path="/admin/register" element={<Register />} /> */}
-            <Route path="/admin" element={<AdminApp />}>
+            <Route path="/basement" element={<AdminApp />}>
                 <Route path="dashboard" element={<Dashboard />} />
                 <Route path="edit-blog" element={<BlogEdit />} />
                 <Route path="edit-about" element={<AboutEdit />} />

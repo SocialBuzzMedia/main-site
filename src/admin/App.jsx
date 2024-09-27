@@ -34,7 +34,7 @@ function App() {
             </div>
         </div>
     ) : (
-        <Navigate to={`/admin/login`} />
+        <Navigate to={`/basement/login`} />
     );
 }
 

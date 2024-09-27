@@ -58,7 +58,7 @@ const EditVisionMission = () => {
                     text: "This Section Updated SuccessFully",
                     icon: "success",
                 }).then(() => {
-                    window.location.href = "/admin/edit-vision-mission";
+                    window.location.href = "/basement/edit-vision-mission";
                 });
 
                 fetchSections();
@@ -75,7 +75,7 @@ const EditVisionMission = () => {
                     text: "This Section Created SuccessFully",
                     icon: "success",
                 }).then(() => {
-                    window.location.href = "/admin/edit-vision-mission";
+                    window.location.href = "/basement/edit-vision-mission";
                 });
                 fetchSections();
                 resetForm();
@@ -107,7 +107,7 @@ const EditVisionMission = () => {
                 text: "This Section Deleted SuccessFully",
                 icon: "success",
             }).then(() => {
-                window.location.href = "/admin/edit-vision-mission";
+                window.location.href = "/basement/edit-vision-mission";
             });
             fetchSections();
         } catch (error) {
@@ -195,6 +195,10 @@ const EditVisionMission = () => {
                         className="border p-2 w-full mb-4"
                         // required
                     />
+                    <p className="text-red-600 text-[11px]">
+                        Image size should be less than 1 MB <br /> Dimension
+                        should be 600X400 px
+                    </p>
                     <input
                         type="text"
                         name="title"

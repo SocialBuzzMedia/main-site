@@ -63,7 +63,7 @@ const ClientScroll = () => {
                 icon: "success",
                 confirmButtonText: "Okay",
             }).then(() => {
-                window.location.href = "/admin/edit-clients";
+                window.location.href = "/basement/edit-clients";
             });
             fetchClients();
             resetForm();
@@ -85,7 +85,7 @@ const ClientScroll = () => {
                 icon: "success",
                 confirmButtonText: "Okay",
             }).then(() => {
-                window.location.href = "/admin/edit-clients";
+                window.location.href = "/basement/edit-clients";
             });
             fetchClients();
         } catch (error) {
@@ -165,6 +165,10 @@ const ClientScroll = () => {
                             placeholder="Add Image"
                             className="rounded w-full p-2 border border-gray-200"
                         />
+                        <p className="text-red-600 text-[11px]">
+                            Image size should be less than 1 MB <br /> Dimension
+                            should be 600X400 px
+                        </p>
                         <input
                             type="text"
                             name="name"

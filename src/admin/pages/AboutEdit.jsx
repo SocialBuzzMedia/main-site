@@ -71,7 +71,7 @@ const AboutEdit = () => {
                     text: "About Section Updated SuccessFully",
                     icon: "success",
                 }).then(() => {
-                    window.location.href = "/admin/edit-about";
+                    window.location.href = "/basement/edit-about";
                 });
                 fetchAbouts();
                 resetForm();
@@ -93,7 +93,7 @@ const AboutEdit = () => {
                     confirmButtonText: "Okay",
                     confirmButtonColor: "Red",
                 }).then(() => {
-                    window.location.href = "/admin/edit-about";
+                    window.location.href = "/basement/edit-about";
                 });
                 fetchAbouts();
                 resetForm();
@@ -126,7 +126,7 @@ const AboutEdit = () => {
                 text: "About Section Deleted SuccessFully",
                 icon: "success",
             }).then(() => {
-                window.location.href = "/admin/edit-about";
+                window.location.href = "/basement/edit-about";
             });
             fetchAbouts();
         } catch (error) {
@@ -158,7 +158,7 @@ const AboutEdit = () => {
                 <h2 className="text-2xl font-semibold text-red-500 mb-4 text-center">
                     All About Card List
                 </h2>
-                <table className="min-w-full border-collapse block md:table">
+                <table className="min-w-full border-collapse block md:table bg-gray-200">
                     <thead className="block md:table-header-group ">
                         <tr className="border border-grey-500 md:border-none block md:table-row">
                             <th className=" p-2 md:border md:border-grey-500 block md:table-cell text-center">
@@ -222,6 +222,10 @@ const AboutEdit = () => {
                             placeholder="Add Image"
                             className="rounded w-full p-2 border border-gray-200"
                         />
+                        <p className="text-red-600 text-[11px]">
+                            Image size should be less than 1 MB <br /> Dimension
+                            should be 600X400 px
+                        </p>
                         <input
                             type="text"
                             name="title"

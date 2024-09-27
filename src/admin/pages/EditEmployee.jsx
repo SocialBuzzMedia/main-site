@@ -67,7 +67,7 @@ const EditEmployee = () => {
                     text: "Employee Data Updated SuccessFully",
                     icon: "success",
                 }).then(() => {
-                    window.location.href = "/admin/edit-employees";
+                    window.location.href = "/basement/edit-employees";
                 });
                 fetchEmployees();
                 resetForm();
@@ -84,7 +84,7 @@ const EditEmployee = () => {
                     text: "Employee Data Created SuccessFully",
                     icon: "success",
                 }).then(() => {
-                    window.location.href = "/admin/edit-employees";
+                    window.location.href = "/basement/edit-employees";
                 });
                 fetchEmployees();
                 resetForm();
@@ -117,7 +117,7 @@ const EditEmployee = () => {
                 icon: "success",
                 iconColor: "red",
             }).then(() => {
-                window.location.href = "/admin/edit-employees";
+                window.location.href = "/basement/edit-employees";
             });
             fetchEmployees();
         } catch (error) {
@@ -211,6 +211,10 @@ const EditEmployee = () => {
                             placeholder="Add Image"
                             className="rounded w-full p-2 border border-gray-200"
                         />
+                        <p className="text-red-600 text-[11px]">
+                            Image size should be less than 1 MB <br /> Dimension
+                            should be 600X400 px
+                        </p>
                         <input
                             type="text"
                             name="name"

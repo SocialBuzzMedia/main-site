@@ -178,7 +178,7 @@ const About = () => {
             <hr className="w-9/12 mx-auto" />
 
             <div className=" py-10">
-                <div className="container w-3/4 mx-auto">
+                <div className="container w-9/12 mx-auto">
                     <div>
                         <Headings
                             title={`Our Team`}
@@ -187,8 +187,8 @@ const About = () => {
                             classNameDesc={`text-black`}
                         />
                     </div>
-                    <div className=" lg:w-9/12 w-11/12">
-                        {/* Team Members     */}
+                    <div className=" lg:w-9/12 w-11/12 mx-auto">
+                        {/* Team Members*/}
                         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 m-8">
                             {employeeSection.map((emp) => (
                                 <Teams key={emp._id} teamDetails={emp} />

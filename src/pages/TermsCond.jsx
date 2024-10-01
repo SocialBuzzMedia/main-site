@@ -9,7 +9,7 @@ const TermsCond = () => {
             />
             <div className="min-h-screen  flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl w-full space-y-8 p-10 rounded-lg">
-                    <h1 className="text-3xl font-bold text-gray-900">
+                    <h1 className="text-3xl font-bold text-red-600">
                         Terms and Conditions
                     </h1>
                     <section className="space-y-6 text-gray-700">

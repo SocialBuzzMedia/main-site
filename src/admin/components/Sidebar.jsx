@@ -73,7 +73,7 @@ const Sidebar = () => {
                             <span className="me-4">
                                 <ImBlog size={30} />
                             </span>
-                            <p className="lg:block hidden">Edit Blog</p>
+                            <p className="lg:block hidden">Blog</p>
                         </Link>
                     </li>
 
@@ -86,7 +86,7 @@ const Sidebar = () => {
                             <span className="me-4">
                                 <IoMdInformationCircleOutline size={30} />
                             </span>
-                            <p className="lg:block hidden">Edit About Card</p>
+                            <p className="lg:block hidden">About Card</p>
                         </Link>
                     </li>
 
@@ -99,9 +99,7 @@ const Sidebar = () => {
                             <span className="me-4">
                                 <TbDeviceVisionPro size={30} />
                             </span>
-                            <p className="lg:block hidden">
-                                Edit Vision & Mission
-                            </p>
+                            <p className="lg:block hidden">Vision & Mission</p>
                         </Link>
                     </li>
 
@@ -114,7 +112,7 @@ const Sidebar = () => {
                             <span className="me-4">
                                 <MdOutlineMiscellaneousServices size={30} />
                             </span>
-                            <p className="lg:block hidden">Edit Services</p>
+                            <p className="lg:block hidden">Services</p>
                         </Link>
                     </li>
 
@@ -127,9 +125,7 @@ const Sidebar = () => {
                             <span className="me-4">
                                 <TbListDetails size={30} />
                             </span>
-                            <p className="lg:block hidden">
-                                Edit Employee Details
-                            </p>
+                            <p className="lg:block hidden">Employee Details</p>
                         </Link>
                     </li>
 
@@ -142,9 +138,7 @@ const Sidebar = () => {
                             <span className="me-4">
                                 <IoMdPeople size={30} />
                             </span>
-                            <p className="lg:block hidden">
-                                Edit Clients Details
-                            </p>
+                            <p className="lg:block hidden">Clients Details</p>
                         </Link>
                     </li>
                 </ul>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 import logo from "../assets/socialBuzzMedia.png";
+import HelmetWrapper from "../../components/HelmetProviderComponent/HelmetWrapper";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -36,6 +37,7 @@ const Login = () => {
 
     return (
         <div className="flex items-center justify-center h-screen bg-gray-100 flex-col gap-12">
+            <HelmetWrapper title="Admin" />
             <div className="block">
                 <img src={logo} width={200} className="" />
             </div>

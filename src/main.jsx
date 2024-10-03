@@ -29,6 +29,7 @@ import NotFound from "./pages/NotFound.jsx";
 import ClientScroll from "./admin/pages/ClientScroll.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import TermsCond from "./pages/TermsCond.jsx";
+import FaqEdit from "./admin/pages/FaqEdit.jsx";
 
 const routers = createBrowserRouter(
     createRoutesFromElements(
@@ -66,6 +67,7 @@ const routers = createBrowserRouter(
                 <Route path="edit-services" element={<ServicesEdit />} />
                 <Route path="edit-employees" element={<EditEmployee />} />
                 <Route path="edit-clients" element={<ClientScroll />} />
+                <Route path="edit-faq" element={<FaqEdit />} />
             </Route>
         </>
     )

@@ -7,6 +7,7 @@ import { TbDeviceVisionPro, TbListDetails } from "react-icons/tb";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { IoMdPeople } from "react-icons/io";
 import { IoLogOut } from "react-icons/io5";
+import { FaFileCircleQuestion } from "react-icons/fa6";
 import axios from "axios";
 import Swal from "sweetalert2";
 
@@ -73,7 +74,7 @@ const Sidebar = () => {
                             <span className="me-4">
                                 <ImBlog size={30} />
                             </span>
-                            <p className="lg:block hidden">Blog</p>
+                            <p className="lg:block hidden">Blogs</p>
                         </Link>
                     </li>
 
@@ -112,7 +113,7 @@ const Sidebar = () => {
                             <span className="me-4">
                                 <MdOutlineMiscellaneousServices size={30} />
                             </span>
-                            <p className="lg:block hidden">Services</p>
+                            <p className="lg:block hidden">Services Card</p>
                         </Link>
                     </li>
 
@@ -125,7 +126,7 @@ const Sidebar = () => {
                             <span className="me-4">
                                 <TbListDetails size={30} />
                             </span>
-                            <p className="lg:block hidden">Employee Details</p>
+                            <p className="lg:block hidden">Teams Section</p>
                         </Link>
                     </li>
 
@@ -138,7 +139,20 @@ const Sidebar = () => {
                             <span className="me-4">
                                 <IoMdPeople size={30} />
                             </span>
-                            <p className="lg:block hidden">Clients Details</p>
+                            <p className="lg:block hidden">Clients Scroll</p>
+                        </Link>
+                    </li>
+
+                    {/* Link to edit or create Client Scroll Card  */}
+                    <li className="mb-1">
+                        <Link
+                            to="/basement/edit-faq"
+                            className=" hover:text-gray-400 flex items-center"
+                        >
+                            <span className="me-4">
+                                <FaFileCircleQuestion size={30} />
+                            </span>
+                            <p className="lg:block hidden">FAQs</p>
                         </Link>
                     </li>
                 </ul>

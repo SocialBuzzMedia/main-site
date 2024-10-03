@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 const Headings = ({ title, description, className, classNameDesc }) => {
     return (
         <>
-            <div className="text-center font-medium md:text-6xl text-4xl text-red-500 px-10 capitalize">
+            <div className="text-center font-medium md:text-6xl text-4xl text-red-500 px-10 mb-5 capitalize">
                 {title && (
-                    <p className={`md:text-6xl text-4xl ${className}`}>
+                    <h1 className={`md:text-6xl text-4xl ${className}`}>
                         {title}
-                    </p>
+                    </h1>
                 )}
                 {description && (
                     <p

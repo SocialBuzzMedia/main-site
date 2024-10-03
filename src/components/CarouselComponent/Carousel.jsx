@@ -1,18 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import "./Carousel.css";
-
-// import angel_logo from "/images/angel-logo.png";
-// import bhsbc_logo from "/images/bhsbc_logo.png";
-// import brandmates_logo from "/images/brandmates_logo.jpg";
-// import brdc_logo from "/images/brdc_logo.jpg";
-// import drHasan_logo from "/images/dr_hasan_logo.png";
-// import greenTrends_logo from "/images/greentrends_logo.png";
-// import pinakiRay_logo from "/images/pinaki_ray_logo.jpeg";
-// import realmeStore_logo from "/images/realme_logo.png";
-// import wb66_logo from "/images/wb66_logo.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -49,7 +38,6 @@ const Carousel = () => {
                     slidesToShow: 4,
                     slidesToScroll: 1,
                     infinite: true,
-                    // dots: true,
                 },
             },
             {

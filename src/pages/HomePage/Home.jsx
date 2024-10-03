@@ -10,6 +10,7 @@ import AboutCard from "../../components/AboutCardComponent/AboutCard";
 import HeroSection from "../../components/HeroSection/HeroSection";
 import bgVideo from "/videos/bg-hero-video-a.mp4";
 import HelmetWrapper from "../../components/HelmetProviderComponent/HelmetWrapper";
+import FAQSection from "../../components/FAQComponent/FAQSection";
 // import FaqAccordion from "../../components/FaqAccordionComponent/FaqAccordion";
 
 const Home = () => {
@@ -132,10 +133,12 @@ const Home = () => {
                     </div>
                 </div>
 
+                <hr className="w-9/12 mx-auto" />
+
                 {/* FAQ */}
-                {/* <div className="block">
-                    <FaqAccordion />
-                </div> */}
+                <div className="py-10">
+                    <FAQSection />
+                </div>
 
                 {/* Contact CTA Section */}
                 <div className="bg-overlay-a">

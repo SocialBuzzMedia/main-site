@@ -10,6 +10,7 @@ import AboutCard from "../../components/AboutCardComponent/AboutCard";
 import HeroSection from "../../components/HeroSection/HeroSection";
 import bgVideo from "/videos/bg-hero-video-a.mp4";
 import HelmetWrapper from "../../components/HelmetProviderComponent/HelmetWrapper";
+// import FaqAccordion from "../../components/FaqAccordionComponent/FaqAccordion";
 
 const Home = () => {
     const [serviceSection, setServiceSection] = useState([]);
@@ -59,7 +60,6 @@ const Home = () => {
                 <HeroSection
                     bgVideo={bgVideo}
                     heroHeading={`Amplify your digital presence with our strategy and creativity`}
-                    // heroSubHeading={`lorem ipsum dolor sit amet, consectetur`}
                     contactLink={`Get in touch with us`}
                     appointmentLink={`Get a quick appointment`}
                     overlayClassName={`home-overlay`}
@@ -131,6 +131,11 @@ const Home = () => {
                         <Carousel />
                     </div>
                 </div>
+
+                {/* FAQ */}
+                {/* <div className="block">
+                    <FaqAccordion />
+                </div> */}
 
                 {/* Contact CTA Section */}
                 <div className="bg-overlay-a">
